@@ -51,11 +51,16 @@ body, html {
 .section {
   min-height: 100vh;
   border-top: 1px solid #ddd;
+  transition: transform 1s, opacity 2s;
 }
 
-.section__hidden {
+.section--hidden {
   opacity: 0;
-  transform: translateY(100px);
+  transform: translateY(120px);
+}
+
+.section__tittle--desc {
+  color: tomato;
 }
 
 .container {

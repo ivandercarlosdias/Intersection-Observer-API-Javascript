@@ -47,9 +47,15 @@ body, html {
 .section {
     min-height: 100vh;
     border-top: 1px solid #ddd;
-    &__hidden {
+    transition: transform 1s, opacity 2s;
+    &--hidden {
         opacity: 0;
-        transform: translateY(100px);
+        transform: translateY(120px);
+    }
+    &__tittle {
+        &--desc {
+            color: tomato;
+        }
     }
 }
 
