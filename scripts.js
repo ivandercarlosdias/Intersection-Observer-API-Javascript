@@ -4,6 +4,7 @@
 // Menu Sticky - Fixed
 
 const nav = document.querySelector(".nav");
+const navHeight = nav.getBoundingClientRect().height;
 const header = document.querySelector(".header");
 
 const stickyNav = function(entries) {
@@ -16,6 +17,7 @@ const stickyNav = function(entries) {
 const headerObserver = new IntersectionObserver(stickyNav, {
     root: null,
     threshold: 0,
+    rootMargin: `-${navHeight}px`,
 });
 
 headerObserver.observe(header);
